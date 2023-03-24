@@ -86,7 +86,13 @@ nav ul ul li:hover > a {
     visibility: visible;
     opacity: 1;
   }
-  
+
+  nav li:active > ul {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+  }
+
   nav ul ul {
     background-color: #444;
     visibility: hidden;
@@ -103,10 +109,9 @@ nav ul ul li:hover > a {
   nav ul ul li a:hover {
     background-color: #555;
   }
+}
 
-
-
-}.card-container {
+.card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

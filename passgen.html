@@ -51,45 +51,46 @@ input[type="text"] {
 
       <script>
         const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const numberChars = "0123456789";
-const symbolChars = "!@#$%^&*()_+";
+        const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const numberChars = "0123456789";
+        const symbolChars = "!@#$%^&*()_+";
 
-function generatePassword() {
-  // Get user inputs
-  const passwordLength = document.getElementById("password-length").value;
-  const includeCaps = document.getElementById("include-caps").checked;
-  const includeNumbers = document.getElementById("include-numbers").checked;
-  const includeSymbols = document.getElementById("include-symbols").checked;
+        function generatePassword() {
+        // Get user inputs
+        const passwordLength = document.getElementById("password-length").value;
+        const includeCaps = document.getElementById("include-caps").checked;
+        const includeNumbers = document.getElementById("include-numbers").checked;
+        const includeSymbols = document.getElementById("include-symbols").checked;
 
-  // Define characters to include in the password
-  let chars = lowercaseChars;
-  if (includeCaps) {
-    chars += uppercaseChars;
-  }
-  if (includeNumbers) {
-    chars += numberChars;
-  }
-  if (includeSymbols) {
-    chars += symbolChars;
-  }
+        // Define characters to include in the password
+        let chars = lowercaseChars;
+        if (includeCaps) {
+            chars += uppercaseChars;
+        }
+        if (includeNumbers) {
+            chars += numberChars;
+        }
+        if (includeSymbols) {
+            chars += symbolChars;
+        }
 
-  let password = "";
-  for (let i = 0; i < passwordLength; i++) {
-    // Choose a random character from the chars string
-    const randomIndex = Math.floor(Math.random() * chars.length);
-    const randomChar = chars[randomIndex];
-    password += randomChar;
-  }
+        let password = "";
+        for (let i = 0; i < passwordLength; i++) {
+            // Choose a random character from the chars string
+            const randomIndex = Math.floor(Math.random() * chars.length);
+            const randomChar = chars[randomIndex];
+            password += randomChar;
+        }
 
-  // Update the password field with the generated password
-  const passwordField = document.getElementById("password");
-  passwordField.value = password;
-}
+        // Update the password field with the generated password
+        const passwordField = document.getElementById("password");
+        passwordField.value = password;
+        }
 
-// Attach event listener to the Generate Password button
-const generateButton = document.getElementById("generate-password");
-generateButton.addEventListener("click", generatePassword);
+        // Attach event listener to the Generate Password button
+        const generateButton = document.getElementById("generate-password");
+        generateButton.addEventListener("click", generatePassword);
+        
       </script>
 </body>
 </html>
