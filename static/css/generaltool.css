@@ -23,10 +23,13 @@
 }
 .toolContainer input[type="range"] {
     display: block;
+    cursor: ew-resize;
 }
 .toolContainer input[type="checkbox"] {
     width: 22px;
     height: 22px;
+    accent-color: var(--primary-focus);
+    cursor: pointer;
 }
 .toolContainer input[type="text"] {
     border: 2px solid var(--primary);
