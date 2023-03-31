@@ -29,7 +29,7 @@ header {
 }
 .nav-item {
   margin-right: auto;
-  padding: 20px;
+  
 }
 .nav-item:last-child {
   margin-right: 0;
@@ -38,6 +38,7 @@ header {
   color: #666;
   text-decoration: none;
   font-size: 15px;
+  padding: 15px 40px;
 }
 
 ul li {
