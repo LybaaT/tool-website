@@ -22,7 +22,8 @@ header {
   list-style: none;
 }
 .nav-item {
-  margin-right: 30px;
+  margin-right: auto;
+  padding: 20px;
 }
 .nav-item:last-child {
   margin-right: 0;
