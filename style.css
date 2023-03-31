@@ -50,9 +50,11 @@ ul li a {
 }
 ul li ul.dropdown li {
   display: block;
+  white-space: nowrap;
+  padding: 0;
 }
 ul li ul.dropdown {
-  min-width: 200px;
+  min-width: 100px;
   background-color: white;
   position: absolute;
   z-index: 99;
