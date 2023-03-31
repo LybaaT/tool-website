@@ -1,0 +1,102 @@
+<style>
+header {
+    background-color: var(--primary);
+    color: #666;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand a {
+    color: var(--primary-text);
+    font-size: 24px;
+    text-decoration: none;
+    padding-left: 40px;
+}
+.navbar-nav {
+    display: flex;
+    list-style: none;
+}
+.nav-item {
+    margin-right: auto;
+}
+.nav-item:last-child {
+    margin-right: 0;
+}
+.nav-item a {
+    color: var(--primary-text);;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px 40px;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+ul li a {
+    display: block;
+    text-align: center;
+}
+ul li ul.dropdown {
+    background-color: var(--primary);
+    position: absolute;
+    z-index: 99;
+    display: none;
+    right: 0px;
+}
+ul li ul.dropdown li {
+    display: block;
+    white-space: nowrap;
+    padding: 0;
+}
+ul li:hover {
+    background-color: var(--primary-focus);
+}
+ul li:hover ul.dropdown {
+    display:block;
+}
+</style>
+<header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="/">Tool Box</a>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#">SEO Tools</a>
+                <ul class="dropdown">
+                    <li class="nav-item"><a href="#">Backlink Checker</a></li>
+                    <li class="nav-item"><a href="#">Keyword Research</a></li>
+                    <li class="nav-item"><a href="#">High CPC Keywords</a></li>
+                    <li class="nav-item"><a href="#">Google Search Trend</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="#">Social Media</a>
+                <ul class="dropdown">
+                    <li class="nav-item"><a href="#">Youtube Title Generator</a></li>
+                    <li class="nav-item"><a href="#">Instagram Hashtag Generator</a></li>
+                    <li class="nav-item"><a href="#">Youtube Subtitle Generator</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="#">Website</a>
+                <ul class="dropdown">
+                    <li class="nav-item"><a href="#">Privacy Policy Generator</a></li>
+                    <li class="nav-item"><a href="#">Terms of Service Generator</a></li>
+                    <li class="nav-item"><a href="#">Color Scheme Generator</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="#">AI Writer</a>
+                <ul class="dropdown">
+                    <li class="nav-item"><a href="#">Blog Outline Creator</a></li>
+                    <li class="nav-item"><a href="#">Paraphraser</a></li>
+                    <li class="nav-item"><a href="#">Plagiarism Checker</a></li>
+                    <li class="nav-item"><a href="#">Blog Title Generator</a></li>
+                    <li class="nav-item"><a href="#">Grammar Checker</a></li>
+                    <li class="nav-item"><a href="#">Summarizer</a></li>
+                    <li class="nav-item"><a href="#">Blog Writer</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>

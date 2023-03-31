@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "sourcesanspro";
+    src: url(/static/fonts/SourceSansPro-Regular.ttf);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sourcesanspro;
+    border: none;
+}
+:root {
+    --primary: #fce8e8;
+    --primary-focus: #ffc0cb;
+    --primary-text: #666666;
+    --primary-text-focus: #333333;
+    --secondary: #ffffff;
+}

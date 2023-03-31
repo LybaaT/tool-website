@@ -1,0 +1,45 @@
+<style>
+footer {
+    background-color: var(--primary);
+    bottom: 0;
+    font-size: 16px;
+    padding-block: 20px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    position: fixed;
+}
+.left {
+    flex-basis: 25%;
+    padding-inline: 30px;
+    color: var(--primary-text);
+}
+.right {
+    flex-basis: 75%;
+    display: flex;
+    justify-content: flex-end;
+    padding-inline: 30px;
+}
+.right a {
+    margin-left: 50px;
+    color: var(--primary-text);
+    text-decoration: none;
+}
+.right a:hover {
+    color: var(--primary-text-focus);
+}
+</style>
+<footer>
+    <div class="left">&copy; 2023-<span id="footerYear"></span></div>
+    <div class="right">
+        <a href="/privacypolicy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/sitemap">Sitemap</a>
+    </div>
+</footer>
+<script>
+    const year = new Date().getFullYear();
+    const elem = document.getElementById('footerYear');
+    elem.innerText = year;
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+	{% include 'components/meta.html.j2' %}
+	<style>
+		.homeMessage {
+			color: var(--primary-text);
+            margin: 40px;
+            text-align: center;
+		}
+	</style>
+</head>
+<body>
+	{% include 'components/header.html.j2' %}
+
+	<h1 class="homeMessage">This is the homepage</h1>
+  	
+  	{% include "components/footer.html.j2" %}
+</body>
+</html>
