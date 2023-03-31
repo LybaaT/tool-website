@@ -4,6 +4,7 @@
 }
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: sanspro;
 }
@@ -39,9 +40,30 @@ header {
   font-size: 15px;
 }
 
-
-
-
+ul li {
+  display: inline-block;
+  position: relative;
+}
+ul li a {
+  display: block;
+  text-align: center;
+}
+ul li ul.dropdown li {
+  display: block;
+}
+ul li ul.dropdown {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+ul li:hover {
+  background-color: pink;
+}
+ul li:hover ul.dropdown {
+  display:block;
+}
 
 
 
