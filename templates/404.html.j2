@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>404</title>
-	{% include 'components/meta.html.j2' %}
+	{% include '/components/meta.html.j2' %}
 	<style>
         .notFoundMessage {
             color: var(--primary-text);
@@ -12,10 +12,10 @@
 	</style>
 </head>
 <body>
-	{% include 'components/header.html.j2' %}
+	{% include '/components/header.html.j2' %}
 
     <h1 class="notFoundMessage">Page not found.</h1>
   	
-  	{% include "components/footer.html.j2" %}
+  	{% include "/components/footer.html.j2" %}
 </body>
 </html>

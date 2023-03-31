@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Homepage</title>
-	{% include 'components/meta.html.j2' %}
+	{% include '/components/meta.html.j2' %}
 	<style>
 		.homeMessage {
 			color: var(--primary-text);
@@ -12,10 +12,10 @@
 	</style>
 </head>
 <body>
-	{% include 'components/header.html.j2' %}
+	{% include '/components/header.html.j2' %}
 
 	<h1 class="homeMessage">This is the homepage</h1>
   	
-  	{% include "components/footer.html.j2" %}
+  	{% include "/components/footer.html.j2" %}
 </body>
 </html>
