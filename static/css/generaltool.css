@@ -1,0 +1,46 @@
+.toolInfo {
+    margin: 40px;
+    margin-bottom: 0px;
+    padding: 20px;
+    border: 2px solid var(--primary);
+    max-width: 500px;
+    color: var(--secondary-text-focus);
+}
+.toolTitle {
+    font-size: 28px;
+}
+
+.toolContainer {
+    margin: 40px;
+    padding: 20px;
+    border: 2px solid var(--primary);
+    max-width: 500px;
+    color: var(--secondary-text-focus);
+}
+.toolContainer p {
+    font-size: 22px;
+    display: inline-block;
+}
+.toolContainer input[type="range"] {
+    display: block;
+}
+.toolContainer input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+}
+.toolContainer input[type="text"] {
+    border: 2px solid var(--primary);
+    padding: 4px;
+    outline: none;
+    font-size: 20px;
+    width: 100%;
+    color: var(--secondary-text-focus);
+}
+.toolContainer .feedback {
+    border: 2px solid var(--primary);
+    padding: 4px;
+    border-radius: 4px;
+    margin-block: 4px;
+    color: var(--secondary-text);
+    font-size: 18px;
+}

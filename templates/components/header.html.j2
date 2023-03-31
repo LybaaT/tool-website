@@ -18,44 +18,34 @@ header {
     display: flex;
     list-style: none;
 }
-.nav-item {
-    margin-right: auto;
-}
-.nav-item:last-child {
-    margin-right: 0;
-}
+
 .nav-item a {
-    color: var(--primary-text);;
+    color: var(--primary-text);
     text-decoration: none;
     font-size: 16px;
     padding: 15px 40px;
-}
-
-ul li {
-    display: inline-block;
-    position: relative;
-}
-ul li a {
     display: block;
     text-align: center;
 }
-ul li ul.dropdown {
+.dropdown {
     background-color: var(--primary);
     position: absolute;
     z-index: 99;
     display: none;
+}
+.nav-item:hover .dropdown {
+    display:block;
+}
+.dropdown.sidedocked {
     right: 0px;
 }
-ul li ul.dropdown li {
+.nav-item, .nav-subitem {
     display: block;
     white-space: nowrap;
     padding: 0;
 }
-ul li:hover {
+.nav-item:hover, .nav-subitem:hover {
     background-color: var(--primary-focus);
-}
-ul li:hover ul.dropdown {
-    display:block;
 }
 </style>
 <header>
@@ -66,35 +56,36 @@ ul li:hover ul.dropdown {
         <ul class="navbar-nav">
             <li class="nav-item"><a href="#">SEO Tools</a>
                 <ul class="dropdown">
-                    <li class="nav-item"><a href="#">Backlink Checker</a></li>
-                    <li class="nav-item"><a href="#">Keyword Research</a></li>
-                    <li class="nav-item"><a href="#">High CPC Keywords</a></li>
-                    <li class="nav-item"><a href="#">Google Search Trend</a></li>
+                    <li class="nav-subitem"><a href="#">Backlink Checker</a></li>
+                    <li class="nav-subitem"><a href="#">Keyword Research</a></li>
+                    <li class="nav-subitem"><a href="#">High CPC Keywords</a></li>
+                    <li class="nav-subitem"><a href="#">Google Search Trend</a></li>
                 </ul>
             </li>
             <li class="nav-item"><a href="#">Social Media</a>
                 <ul class="dropdown">
-                    <li class="nav-item"><a href="#">Youtube Title Generator</a></li>
-                    <li class="nav-item"><a href="#">Instagram Hashtag Generator</a></li>
-                    <li class="nav-item"><a href="#">Youtube Subtitle Generator</a></li>
+                    <li class="nav-subitem"><a href="/passwordgenerator">Password Generator</a></li>
+                    <li class="nav-subitem"><a href="#">Youtube Title Generator</a></li>
+                    <li class="nav-subitem"><a href="#">Instagram Hashtag Generator</a></li>
+                    <li class="nav-subitem"><a href="#">Youtube Subtitle Generator</a></li>
                 </ul>
             </li>
             <li class="nav-item"><a href="#">Website</a>
                 <ul class="dropdown">
-                    <li class="nav-item"><a href="#">Privacy Policy Generator</a></li>
-                    <li class="nav-item"><a href="#">Terms of Service Generator</a></li>
-                    <li class="nav-item"><a href="#">Color Scheme Generator</a></li>
+                    <li class="nav-subitem"><a href="#">Privacy Policy Generator</a></li>
+                    <li class="nav-subitem"><a href="#">Terms of Service Generator</a></li>
+                    <li class="nav-subitem"><a href="#">Color Scheme Generator</a></li>
                 </ul>
             </li>
             <li class="nav-item"><a href="#">AI Writer</a>
-                <ul class="dropdown">
-                    <li class="nav-item"><a href="#">Blog Outline Creator</a></li>
-                    <li class="nav-item"><a href="#">Paraphraser</a></li>
-                    <li class="nav-item"><a href="#">Plagiarism Checker</a></li>
-                    <li class="nav-item"><a href="#">Blog Title Generator</a></li>
-                    <li class="nav-item"><a href="#">Grammar Checker</a></li>
-                    <li class="nav-item"><a href="#">Summarizer</a></li>
-                    <li class="nav-item"><a href="#">Blog Writer</a></li>
+                <ul class="dropdown sidedocked">
+                    <li class="nav-subitem"><a href="#">Blog Outline Creator</a></li>
+                    <li class="nav-subitem"><a href="#">Paraphraser</a></li>
+                    <li class="nav-subitem"><a href="#">Plagiarism Checker</a></li>
+                    <li class="nav-subitem"><a href="#">Blog Title Generator</a></li>
+                    <li class="nav-subitem"><a href="#">Grammar Checker</a></li>
+                    <li class="nav-subitem"><a href="#">Summarizer</a></li>
+                    <li class="nav-subitem"><a href="#">Blog Writer</a></li>
                 </ul>
             </li>
         </ul>
