@@ -1,6 +1,11 @@
+@font-face {
+  font-family: sanspro;
+  src: url(Source_Sans_Pro/SourceSansPro-Regular.ttf);
+}
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: sanspro;
 }
 header {
   background-color: #fce8e8;
@@ -33,6 +38,9 @@ header {
   text-decoration: none;
   font-size: 15px;
 }
+
+
+
 
 
 
