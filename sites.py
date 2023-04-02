@@ -8,9 +8,9 @@ PORT = 3500
 def homepage():
     return render_template('homepage.html.j2')
 
-@app.route('/passwordgenerator')
-def passwordgenerator():
-    return render_template('passwordgenerator.html.j2')
+@app.route('/tool/<toolname>')
+def tool(toolname):
+    return render_template(toolname + '/index.html.j2')
 
 @app.errorhandler(404)
 def page_not_found(e):

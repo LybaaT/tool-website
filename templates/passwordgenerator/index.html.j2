@@ -4,6 +4,9 @@
 	<title>Password Generator</title>
 	{% include '/components/meta.html.j2' %}
 	<link rel="stylesheet" href="/static/css/generaltool.css">
+    <style>
+        {% include "passwordgenerator/style.css" %}
+    </style>
 </head>
 <body>
 	{% include '/components/header.html.j2' %}
@@ -37,7 +40,9 @@
         <input type="text" id="passwordOutput">
     </div>
     <script src="/static/js/general.js"></script>
-    <script src="/static/js/passwordgenerator.js"></script>
+    <script>
+        {% include "/passwordgenerator/main.js" %}
+    </script>
   	
   	{% include "/components/footer.html.j2" %}
 </body>

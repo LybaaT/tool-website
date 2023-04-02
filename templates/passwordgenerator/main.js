@@ -34,6 +34,12 @@ function generate() {
     // Calculate entropy of the password
     const entropy = characterPool.length ** passwordLength;
 
+    const resp = entropyResponse(entropy);
+    $('entropyLevel').style.borderLeft = `5px solid ${resp.color}`;
+    $('entropyLevel').innerText = resp.text;
+}
+
+function entropyResponse(entropy) {
     let color = '#000000';
     let text = '';
     if (entropy < 100_000_000) {
@@ -54,9 +60,11 @@ function generate() {
     } else {
         color = '#00FFFF';
         text = 'Uncrackable';
-    }
-    $('entropyLevel').style.borderLeft = `5px solid ${color}`;
-    $('entropyLevel').innerText = text;
+    };
+    return {
+        color: color,
+        text: text
+    };
 }
 
 // Any interaction generates a new password
