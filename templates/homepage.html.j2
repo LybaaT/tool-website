@@ -9,6 +9,14 @@
             margin: 40px;
             text-align: center;
 		}
+		.borderBox {
+            border-radius: 50px;
+            border: 2px solid rgb(255, 219, 153);
+			width: 65%;
+			margin: 2% 10%;
+			padding: 50px 10px;
+        }
+
 	</style>
 </head>
 <body>
@@ -16,9 +24,15 @@
 
 	<h1 class="homeMessage">This is the homepage</h1>
 
-	<div class="borderBox">
-		<h1>Hello</h1>
-	</div>
+    <div class="borderBox">
+        <h1>Tool Box</h1>
+        <h3>The ultimate place for any and all tools here</h3>
+    </div>
+    <div class="borderBox">
+        <h2>SEO tools for your website</h2>
+        <p>Improve your website's ranking and SEO strategies with our free SEO tools!</p>
+        <button></button>
+    </div>
   	
   	{% include "/components/footer.html.j2" %}
 </body>
