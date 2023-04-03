@@ -16,7 +16,41 @@
 			margin: 2% 10%;
 			padding: 50px 10px;
         }
-
+		.card-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 10px;
+		}
+		.card {
+			max-width: 20%;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+			transition: background-color 0.3s ease, box-shadow 0.3s ease;
+		}
+		.card:hover {
+			background-color: #f1f1f1;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+		}
+		.card img {
+			width: 100%;
+			height: auto;
+			border-radius: 5px;
+		}
+		.card h2 {
+			margin-top: 10px;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		.card p {
+			margin-top: 10px;
+			font-size: 16px;
+			color: #666;
+			line-height: 1.5;
+		}
 	</style>
 </head>
 <body>
@@ -31,7 +65,59 @@
     <div class="borderBox">
         <h2>SEO tools for your website</h2>
         <p>Improve your website's ranking and SEO strategies with our free SEO tools!</p>
-        <button></button>
+        <div class="card-container">
+  <div class="card">
+    <img src="img1.jpg" alt="Card Image">
+    <h2>Card Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="card">
+    <img src="img2.jpg" alt="Card Image">
+    <h2>Card Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="card">
+    <img src="img1.jpg" alt="Card Image">
+    <h2>Card Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="card">
+    <img src="img2.jpg" alt="Card Image">
+    <h2>Card Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="card">
+    <img src="img1.jpg" alt="Card Image">
+    <h2>Card Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="card">
+    <img src="img2.jpg" alt="Card Image">
+    <h2>Card Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="card">
+    <img src="img1.jpg" alt="Card Image">
+    <h2>Card Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="card">
+    <img src="img2.jpg" alt="Card Image">
+    <h2>Card Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="card">
+    <img src="img1.jpg" alt="Card Image">
+    <h2>Card Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="card">
+    <img src="img2.jpg" alt="Card Image">
+    <h2>Card Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+</div>
     </div>
   	
   	{% include "/components/footer.html.j2" %}
