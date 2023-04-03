@@ -4,23 +4,17 @@
 	<title>Homepage</title>
 	{% include '/components/meta.html.j2' %}
 	<style>
-		.homeMessage {
-			color: var(--primary-text);
-            margin: 40px;
-            text-align: center;
-		}
 		.borderBox {
             border-radius: 50px;
-            border: 2px solid rgb(255, 219, 153);
-			width: 65%;
+            border: 2px solid rgb(255, 153, 172);
+			max-width: 1300px;
 			margin: 2% 10%;
 			padding: 50px 10px;
         }
 		.card-container {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: center;
-			margin: 10px;
+			justify-content: left;
 		}
 		.card {
 			max-width: 20%;
@@ -56,7 +50,6 @@
 <body>
 	{% include '/components/header.html.j2' %}
 
-	<h1 class="homeMessage">This is the homepage</h1>
 
     <div class="borderBox">
         <h1>Tool Box</h1>
