@@ -1,4 +1,4 @@
-// Shorter function
+// Shorter function for getting an element
 function $(elem) {
     return document.getElementById(elem);
 };
@@ -8,6 +8,7 @@ function choice(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 };
 
+// A collection of characters to access
 const lib = {
     special_characters: "~`! @#$%^&*()_-+={[}]|\:;'<,>.?/",
     numbers: '0123456789',

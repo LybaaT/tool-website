@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Backlink Checker</title>
+	<title>Fancy Text Generator</title>
 	{% include "/components/meta.html.j2" %}
     <link rel="stylesheet" href="/static/css/generaltool.css">
 	<style>
-        {% include "backlinkchecker/style.css" %}
+        {% include "fancytextgenerator/style.css" %}
 	</style>
 </head>
 <body>
 	{% include '/components/header.html.j2' %}
 
     <div class="borderContainer bannerContainer">
-        <h1 class="toolTitle">Backlink Checker</h1>
+        <h1 class="toolTitle">Fancy Text Generator</h1>
         <p class="toolDescription">
-        Backlink Checker is the perfect tool for you.
+        Transform any text into unique Unicode characters to make it stand out. 
         </p>
     </div>
 
     <div class="borderContainer toolContainer">
-        <h1>Content here</h1>
+        <input id="textInput" type="text" placeholder="Enter Text Here">
+        <textarea id="textOutput"></textarea>
     </div>
 
     <script src="/static/js/general.js"></script>
     <script>
-        {% include "backlinkchecker/main.js" %}
+        {% include "fancytextgenerator/main.js" %}
     </script>
   	
   	{% include "/components/footer.html.j2" %}

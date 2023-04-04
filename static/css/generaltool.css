@@ -1,22 +1,18 @@
-.toolInfo {
-    margin: 40px;
-    margin-bottom: 0px;
-    padding: 20px;
-    border: 2px solid var(--primary);
-    max-width: 500px;
-    color: var(--secondary-text-focus);
+.borderContainer {
+    border-radius: var(--border-large);
+    border: 2px solid var(--secondary-mark);
+    max-width: 800px;
+    margin: 20px min(10%, 120px);
+    padding: 50px;
 }
+.bannerContainer {
+    background-color: var(--primary-focus);
+}
+
 .toolTitle {
     font-size: 28px;
 }
 
-.toolContainer {
-    margin: 40px;
-    padding: 20px;
-    border: 2px solid var(--primary);
-    max-width: 500px;
-    color: var(--secondary-text-focus);
-}
 .toolContainer p {
     font-size: 22px;
     display: inline-block;
@@ -38,11 +34,23 @@
     font-size: 20px;
     width: 100%;
     color: var(--secondary-text-focus);
+    border-radius: var(--border-small)
+}
+.toolContainer textarea {
+    border: 2px solid var(--primary);
+    font-size: 18px;
+    width: 100%;
+    color: var(--secondary-text-focus);
+    border-radius: var(--border-small);
+    margin-block: 4px;
+    outline: none;
+    padding: 4px;
+    resize: none;
 }
 .toolContainer .feedback {
     border: 2px solid var(--primary);
     padding: 4px;
-    border-radius: 4px;
+    border-radius: var(--border-small);
     margin-block: 4px;
     color: var(--secondary-text);
     font-size: 18px;
