@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Counter</title>
+	{% include "/components/meta.html.j2" %}
+    <link rel="stylesheet" href="/static/css/generaltool.css">
+	<style>
+        {% include "wordcounter/style.css" %}
+	</style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">Word Counter</h1>
+        <p class="toolDescription">
+        Word Counter is the perfect tool for you.
+        </p>
+    </div>
+
+    <div class="borderContainer toolContainer">
+        <textarea id="inputText"></textarea>
+        <p class="feedback">
+        Words: <span id="countWords"></span>
+        Characters: <span id="countChars"></span>
+        </p>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "wordcounter/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>
