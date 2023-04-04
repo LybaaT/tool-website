@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Backlink Checker</title>
+	{% include "/components/meta.html.j2" %}
+    <link rel="stylesheet" href="/static/css/generaltool.css">
+	<style>
+        {% include "backlinkchecker/style.css" %}
+	</style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">Backlink Checker</h1>
+        <p class="toolDescription">
+        Backlink Checker is the perfect tool for you.
+        </p>
+    </div>
+
+    <div class="borderContainer toolContainer">
+        <h1>Content here</h1>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "backlinkchecker/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>
