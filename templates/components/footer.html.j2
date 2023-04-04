@@ -8,6 +8,7 @@ footer {
     margin: auto;
     display: flex;
     position: fixed;
+    height: 60px;
 }
 .left {
     flex-basis: 33%;
@@ -18,15 +19,31 @@ footer {
     flex-basis: 66%;
     display: flex;
     justify-content: flex-end;
-    padding-inline: 30px;
+    position: absolute;
+    right: 0px;
+    width: 70vw;
 }
 .right a {
-    margin-left: 50px;
+    margin-inline: 1.5vw;
     color: var(--primary-text);
     text-decoration: none;
 }
 .right a:hover {
     color: var(--primary-text-focus);
+}
+@media (max-width: 620px) {
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
+@media (max-width: 400px) {
+    footer {
+        height: 80px;
+    }
 }
 </style>
 <footer>
