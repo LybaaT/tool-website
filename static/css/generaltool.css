@@ -1,18 +1,16 @@
 .borderContainer {
     border-radius: var(--border-large);
     border: 2px solid var(--secondary-mark);
-    max-width: 1400px;
+    max-width:1000px;
     margin: 20px min(10%, 120px);
     padding: 50px;
 }
 .bannerContainer {
     background-color: var(--primary-focus);
 }
-
 .toolTitle {
     font-size: 28px;
 }
-
 .toolContainer p {
     font-size: 22px;
     display: inline-block;
