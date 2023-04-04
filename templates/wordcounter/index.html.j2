@@ -14,12 +14,17 @@
     <div class="borderContainer bannerContainer">
         <h1 class="toolTitle">Word Counter</h1>
         <p class="toolDescription">
-        Word Counter is the perfect tool for you.
+        This program will count the amount of words and characters in your text with ease.
         </p>
     </div>
 
     <div class="borderContainer toolContainer">
-        <textarea id="inputText"></textarea>
+        <textarea id="inputText" placeholder="Enter Text Here"></textarea>
+
+        <p>Count Spaces as Characters:</p>
+        <input type="checkbox" checked="true" id="countSpaces">
+        <br>
+
         <p class="feedback">
         Words: <span id="countWords"></span>
         Characters: <span id="countChars"></span>
