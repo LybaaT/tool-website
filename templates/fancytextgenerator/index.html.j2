@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fancy Text Generator</title>
+	{% include "/components/meta.html.j2" %}
+    <link rel="stylesheet" href="/static/css/generaltool.css">
+	<style>
+        {% include "fancytextgenerator/style.css" %}
+	</style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">Fancy Text Generator</h1>
+        <p class="toolDescription">
+        Transform any text into unique Unicode characters to make it stand out. 
+        </p>
+    </div>
+
+    <div class="borderContainer toolContainer">
+        <input id="textInput" type="text" placeholder="Enter Text Here">
+        <textarea id="textOutput"></textarea>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "fancytextgenerator/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>

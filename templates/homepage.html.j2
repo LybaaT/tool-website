@@ -3,24 +3,10 @@
 <head>
 	<title>Homepage</title>
 	{% include '/components/meta.html.j2' %}
+	<link rel="stylesheet" href="/static/css/global.css">
+	<link rel="stylesheet" href="/static/css/generaltool.css">
 	<style>
-		.borderBox {
-            border-radius: 20px;
-            border: 2px solid rgb(255, 153, 172);
-			max-width: 1300px;
-			margin: 2% 10%;
-			padding: 50px;
-        }
-		.banner {
-			background-color: rgb(255, 221, 231);
-			border: 1px rgb(255, 221, 231);
-			border-radius: 20px;
-			padding: 50px;
-		}
-		.container {
-			margin-bottom: 200px;
-		}
-		.card-container {
+		.cardContainer {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: flex-start;
@@ -36,6 +22,7 @@
 			border-radius: 5px;
 			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 			transition: background-color 0.3s ease, box-shadow 0.3s ease;
+			cursor: pointer;
 		}
 		.card:hover {
 			background-color: #f1f1f1;
@@ -55,17 +42,16 @@
 </head>
 <body>
 	{% include '/components/header.html.j2' %}
-
 	
-    <div class="borderBox banner">
+    <div class="borderContainer bannerContainer">
         <h1>Tool Box</h1>
         <h3>The ultimate place for any and all tools here</h3>
     </div>
 	<div class="container">
-		<div class="borderBox">
+		<div class="borderContainer">
 			<h2>SEO tools for your website</h2>
 			<p>Improve your website's ranking and SEO strategies with our free SEO tools!</p>
-			<div class="card-container">
+			<div class="cardContainer">
 				<div class="card">
 					<img src="/static/img/write-document-svgrepo-com.svg" alt="Card Image">
 					<h2>Card Title</h2>

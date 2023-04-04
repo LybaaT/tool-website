@@ -13,12 +13,7 @@ os.mkdir(namespace)
 os.chdir(namespace + '/')
 
 # Create style.css
-with open('style.css', 'w') as f:
-    f.writelines(""".boilerplateMessage {
-    color: var(--primary-text);
-    margin: 40px;
-    text-align: center;
-}""")
+open('style.css', 'a').close()
 
 # Create main.js
 open('main.js', 'a').close()
@@ -29,18 +24,29 @@ with open('index.html.j2', 'w') as f:
 <html>
 <head>
 	<title>TOOLNAME</title>
-	{% include '/components/meta.html.j2' %}
+	{% include "/components/meta.html.j2" %}
+    <link rel="stylesheet" href="/static/css/generaltool.css">
 	<style>
-        {% include 'NAMESPACE/style.css' %}
+        {% include "NAMESPACE/style.css" %}
 	</style>
 </head>
 <body>
 	{% include '/components/header.html.j2' %}
 
-    <h1 class="boilerplateMessage">Welcome to TOOLNAME.</h1>
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">TOOLNAME</h1>
+        <p class="toolDescription">
+        TOOLNAME is the perfect tool for you.
+        </p>
+    </div>
 
+    <div class="borderContainer toolContainer">
+        <h1>Content here</h1>
+    </div>
+
+    <script src="/static/js/general.js"></script>
     <script>
-        {% include 'NAMESPACE/main.js' %}
+        {% include "NAMESPACE/main.js" %}
     </script>
   	
   	{% include "/components/footer.html.j2" %}

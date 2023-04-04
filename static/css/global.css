@@ -17,4 +17,10 @@
     --secondary: #ffffff;
     --secondary-text: #847a7a;
     --secondary-text-focus: #2d2c2c;
+    --secondary-mark: #ff99ac;
+    --border-large: 10px;
+    --border-small: 4px;
+}
+body {
+    margin-bottom: 200px;
 }
