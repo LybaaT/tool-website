@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from livereload import Server
 
 app = Flask(__name__)
 
@@ -16,4 +17,8 @@ def tool(toolname):
 def page_not_found(e):
     return render_template('404.html.j2')
 
-app.run(port=PORT, host="0.0.0.0", debug=True)
+
+#app.run(port=PORT, host="0.0.0.0")
+
+server = Server(app.wsgi_app)
+server.serve(port=PORT, host="0.0.0.0", debug=True)
