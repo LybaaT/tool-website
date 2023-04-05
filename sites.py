@@ -18,7 +18,8 @@ def page_not_found(e):
     return render_template('404.html.j2')
 
 
-#app.run(port=PORT, host="0.0.0.0")
+app.run(port=PORT, host="0.0.0.0", debug=True)
 
-server = Server(app.wsgi_app)
-server.serve(port=PORT, host="0.0.0.0", debug=True)
+
+#server = Server(app.wsgi_app)
+#server.serve(port=PORT, host="0.0.0.0", debug=True)
