@@ -28,8 +28,20 @@
 			margin-top: 6px;
 			margin-bottom: 16px;
 			resize: vertical;
-			font-size: 16px;
+			font-size: 17px;
 		}
+		input[type=email], select, textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+			font-size: 17px;
+		}
+
 		input[type=submit] {
 			background-color: #000000;
 			color: white;
@@ -39,12 +51,18 @@
 			cursor: pointer;
 			font-size: 20px;
 		}
-		#fname {
-			width: 40%;
-			margin-right: 25px;
+		label {
+			font-size: 18px;
 		}
-		#lname {
-			width: 40%;
+		.column {
+			float: left;
+			width: 50%;
+			padding: 10px;
+		}
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
 		}
 	</style>
 </head>
@@ -58,28 +76,57 @@
 
 	<div class="container">
 		<div class="borderContainer whiteContainer">
-			<form>
-			<label for="fname" >First Name</label>
-			<input type="text" id="fname" name="firstname" placeholder="John">
-
-			<label for="lname">Last Name</label>
-			<input type="text" id="lname" name="lastname" placeholder="Doe"><br>
-
-			<label for="reason">Reason Of Contact</label>
-			<select id="reason" name="reason">
-				<option value="advertisements">Advertisements</option>
-				<option value="tools">Tools</option>
-				<option value="other">Other</option>
-			</select>
+			<form anme="contact" onsubmit="return validateForm()">
+			<div class="row">
+				<div class="column">
+					<label for="fname" >First Name</label><br>
+					<input type="text" id="fname" name="firstname" placeholder="John">
+				</div>
+				<div class="column">
+					<label for="lname">Last Name</label><br>
+					<input type="text" id="lname" name="lastname" placeholder="Doe"><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<label for="reason">Reason Of Contact</label>
+					<select id="reason" name="reason">
+						<option value="advertisements">Advertisements</option>
+						<option value="tools">Tools</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+				<div class="column">
+					<label for="email">Email Address</label><br>
+					<input type="email" id="email" name="email" placeholder="contact@gmail.com"><br>
+				</div>
+			</div>
 
 			<label for="subject">Message</label>
 			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-			<input type="submit" value="Send">			</form>
+			<input type="submit" value="Send">			
+			</form>
 		</div>
 	</div>
 	</div>
   	
   	{% include "/components/footer.html.j2" %}
+
+	<script>
+		function validateForm() {
+			let x = document.forms["contact"]["fname"].value;
+			if (x == "") {
+				alert("Please write your first name.");
+				return false;
+			}
+			let y = document.forms["contact"]["lname"].value;
+			if (y == "") {
+				alert("Please write your last name.");
+				return false;
+			}
+
+		}
+		
+	</script>
 </body>
 </html>
