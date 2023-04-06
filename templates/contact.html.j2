@@ -14,10 +14,37 @@
 		}
 		.bannerContainer p {
 			font-size: 20px;
-			padding-top: 15px;
+			padding-top: 10px;
 		}
 		.whiteContainer {
 			background-color: var(--primary);
+		}
+		input[type=text], select, textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+			font-size: 16px;
+		}
+		input[type=submit] {
+			background-color: #000000;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 20px;
+		}
+		#fname {
+			width: 40%;
+			margin-right: 25px;
+		}
+		#lname {
+			width: 40%;
 		}
 	</style>
 </head>
@@ -26,11 +53,29 @@
 	
     <div class="borderContainer bannerContainer">
         <h1>Reach out to us!</h1>
+		<p>We'd love to hear from you. Please fill this form and we'll contact you ASAP!</p>
     </div>
 
 	<div class="container">
 		<div class="borderContainer whiteContainer">
+			<form>
+			<label for="fname" >First Name</label>
+			<input type="text" id="fname" name="firstname" placeholder="John">
 
+			<label for="lname">Last Name</label>
+			<input type="text" id="lname" name="lastname" placeholder="Doe"><br>
+
+			<label for="reason">Reason Of Contact</label>
+			<select id="reason" name="reason">
+				<option value="advertisements">Advertisements</option>
+				<option value="tools">Tools</option>
+				<option value="other">Other</option>
+			</select>
+
+			<label for="subject">Message</label>
+			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+			<input type="submit" value="Send">			</form>
 		</div>
 	</div>
 	</div>
