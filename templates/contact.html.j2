@@ -76,10 +76,10 @@
 
 	<div class="container">
 		<div class="borderContainer whiteContainer">
-			<form anme="contact" onsubmit="return validateForm()">
+			<form name="contact" onsubmit="return validateForm()">
 			<div class="row">
 				<div class="column">
-					<label for="fname" >First Name</label><br>
+					<label for="fname">First Name</label><br>
 					<input type="text" id="fname" name="firstname" placeholder="John">
 				</div>
 				<div class="column">
@@ -98,7 +98,7 @@
 				</div>
 				<div class="column">
 					<label for="email">Email Address</label><br>
-					<input type="email" id="email" name="email" placeholder="contact@gmail.com"><br>
+					<input type="email" id="email" name="email" placeholder="email@example.com"><br>
 				</div>
 			</div>
 
@@ -112,21 +112,26 @@
   	
   	{% include "/components/footer.html.j2" %}
 
+	<script src="/static/js/general.js"></script>
 	<script>
 		function validateForm() {
-			let x = document.forms["contact"]["fname"].value;
-			if (x == "") {
+			if (!$('fname').value) {
 				alert("Please write your first name.");
+				$('fname').focus();
 				return false;
 			}
-			let y = document.forms["contact"]["lname"].value;
-			if (y == "") {
+			if (!$('lname').value) {
 				alert("Please write your last name.");
+				$('lname').focus();
 				return false;
 			}
-
+			if (!$('email').value) {
+				alert("Please write your e-mail address.");
+				$('email').focus();
+				return false;
+			}
+			return true;
 		}
-		
 	</script>
 </body>
 </html>
