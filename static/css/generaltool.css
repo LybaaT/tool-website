@@ -5,6 +5,12 @@
     margin: 20px min(10%, 120px);
     padding: 50px;
 }
+.borderContainer h2 {
+    font-size: 30px;
+}
+.borderContainer p {
+    font-size: 20px;
+}
 .bannerContainer {
     background-color: var(--primary-focus);
 }
