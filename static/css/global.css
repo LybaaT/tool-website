@@ -10,17 +10,18 @@
     border: none;
 }
 :root {
-    --primary: #fce8eb;
-    --primary-focus: #ffc0cb;
-    --primary-text: #666666;
+    --primary: #ffffff;
+    --primary-focus: #ffde4d;
+    --primary-text: #5f5f5f;
     --primary-text-focus: #333333;
     --secondary: #ffffff;
     --secondary-text: #847a7a;
     --secondary-text-focus: #2d2c2c;
-    --secondary-mark: #ff99ac;
+    --secondary-mark: #423705;
     --border-large: 10px;
     --border-small: 4px;
 }
 body {
     margin-bottom: 200px;
+    background-color: #F4F4F4;
 }
