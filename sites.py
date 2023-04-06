@@ -8,6 +8,10 @@ PORT = 3500
 def homepage():
     return render_template('homepage.html.j2')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html.j2')
+
 @app.route('/tool/<toolname>')
 def tool(toolname):
     return render_template(toolname + '/index.html.j2')
