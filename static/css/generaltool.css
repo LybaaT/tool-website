@@ -4,6 +4,7 @@
     max-width:1000px;
     margin: 20px min(10%, 120px);
     padding: 50px;
+    background-color: var(--primary);
 }
 .borderContainer h2 {
     font-size: 30px;
