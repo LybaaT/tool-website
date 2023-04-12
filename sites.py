@@ -12,6 +12,14 @@ def homepage():
 def contact():
     return render_template('contact.html.j2')
 
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html.j2')
+
+@app.route('/termsofservice')
+def termsofservice():
+    return render_template('termsofservice.html.j2')
+
 @app.route('/tool/<toolname>')
 def tool(toolname):
     return render_template(toolname + '/index.html.j2')

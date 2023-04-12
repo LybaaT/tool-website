@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Terms of Service Generator</title>
+	{% include "/components/meta.html.j2" %}
+    <link rel="stylesheet" href="/static/css/generaltool.css">
+	<style>
+        {% include "termsofservicegenerator/style.css" %}
+	</style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">Terms of Service Generator</h1>
+        <p class="toolDescription">
+        Create a basic Terms of Service document while only providing basic information and save a lot of time.
+        </p>
+    </div>
+
+    <div class="borderContainer toolContainer">
+    <div class="row">
+    <div class="column">
+        <p>Company Name:</p>
+        <input type="text" placeholder="Enter Company Name" id="companyName"></div>
+        <div class="column"><p>Website URL:</p>
+        <input type="text" placeholder="Enter Website URL" id="websiteUrl"></div>
+    </div>
+        <h2>Terms Of Service:</h2>
+        <textarea id="tosOutput" rows="10" spellcheck="false"></textarea>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "termsofservicegenerator/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>
