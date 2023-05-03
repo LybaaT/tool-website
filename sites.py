@@ -4,6 +4,28 @@ app = Flask(__name__)
 
 PORT = 3500
 
+toolnames_readable = {
+    "termsofservicegenerator": "Terms of Service Generator",
+    "privacypolicygenerator": "Privacy Policy Generator",
+    "wordcounter": "Word Counter",
+    "passwordgenerator": "Password Generator",
+    "fancytextgenerator": "Fancy Text Generator",
+    "blogtitlegenerator": "Blog Title Generator",
+    "paragraphwriter": "Paragraph Writer",
+    "spellchecker": "Spell Checker",
+    "backlinkchecker": "Backlink Checker",
+    "keywordresearcher": "Keyword Research Tool",
+    "googlesearchtrend": "Google Search Trend",
+    "longtailkeywordgenerator": "Longtail Keyword Generator",
+    "plagiarismchecker": "Plagiarism Checker",
+    "paraphraser": "Paraphraser",
+    "smalltextgenerator": "Small Text Generator",
+    "summarizer": "Summarizer",
+    "citationgenerator": "Citation Generator",
+    "blogoutlinegenerator": "Blog Outline Generator",
+    "blogideagenerator": "Blog Idea Generator",
+}
+
 @app.route('/')
 def homepage():
     return render_template('homepage.html.j2')
@@ -22,7 +44,7 @@ def termsofservice():
 
 @app.route('/tool/<toolname>')
 def tool(toolname):
-    return render_template(toolname + '/index.html.j2')
+    return render_template(toolname + '/index.html.j2', pageTitle = toolnames_readable[toolname])
 
 @app.errorhandler(404)
 def page_not_found(e):
