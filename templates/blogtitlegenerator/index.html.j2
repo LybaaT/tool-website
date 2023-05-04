@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>blogtitlegenerator</title>
+	<title>{{pageTitle}}</title>
 	{% include "/components/meta.html.j2" %}
     <link rel="stylesheet" href="/static/css/generaltool.css">
 	<style>
         {% include "blogtitlegenerator/style.css" %}
+        .column {
+            width: 47%;
+            display: inline-block;
+        }
 	</style>
 </head>
 <body>
 	{% include '/components/header.html.j2' %}
 
     <div class="borderContainer bannerContainer">
-        <h1 class="toolTitle">blogtitlegenerator</h1>
+        <h1 class="toolTitle">{{pageTitle}}</h1>
         <p class="toolDescription">
-        blogtitlegenerator is the perfect tool for you.
+        {{pageTitle}} is the perfect tool for you.
         </p>
     </div>
 
     <div class="borderContainer toolContainer">
-        <h1>Content here</h1>
+    <div class="row">
+        <div class="column">
+            <label for="topicInput">What is the topic of your blog?</label>
+            <input id="topicInput" type="text" placeholder="Enter Text Here">
+        </div>
+        <div class="column" style="margin-left: 28px;">
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        </div>
+    </div>
+
+    <label for="mainPoints">What are the main key points of your blog?</label>
+    <textarea id="mainPoints"></textarea>
+
+    <textarea id="textOutput"></textarea>
     </div>
 
     <script src="/static/js/general.js"></script>
