@@ -30,7 +30,7 @@
         </div>
         <div class="column" style="margin-left: 28px;">
         <label for="cars">How many ideas do you want?</label>
-        <select name="cars" id="cars">
+        <select name="cars" id="numberOfIdeas">
             <option value="volvo">3</option>
             <option value="saab">5</option>
             <option value="opel">10</option>
@@ -43,6 +43,7 @@
         <textarea id="mainPoints"></textarea>
         <label>Verify your captcha before proceeding</label>
         {% include '/components/captcha.html.j2'%}
+        <button onclick="blogTitle()">Submit</button>
     </div>
 
     <div class="borderContainer toolContainer">
