@@ -17,14 +17,18 @@ const lib = {
 }
 
 // Handle theme
-var toggle = document.getElementById("theme-toggle");
+var toggle = document.querySelector(".switch input");
 
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-if (storedTheme)
+if (storedTheme) {
     document.documentElement.setAttribute('data-theme', storedTheme)
-
+}
+if (storedTheme === 'dark') {
+    toggle.checked = true;
+}
 
 toggle.onclick = function() {
+    console.log("hi");
     var currentTheme = document.documentElement.getAttribute("data-theme");
     var targetTheme = "light";
 
