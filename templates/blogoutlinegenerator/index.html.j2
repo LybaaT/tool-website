@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="/static/css/generaltool.css">
 	<style>
         {% include "blogoutlinegenerator/style.css" %}
+        label {
+            font-size: 20px;
+        }
 	</style>
 </head>
 <body>
@@ -19,9 +22,9 @@
     </div>
 
     <div class="borderContainer toolContainer">
-        <label for="textInput">Title of the blog</label>
+        <label for="textInput">Title Of The Blog</label>
         <input id="textInput" type="text" placeholder="Enter Text Here">
-        <label for="mainPoints">Some main key points of your blog:</label>
+        <label for="mainPoints">Main Key Points Of Your Blog:</label>
         <textarea id="mainPoints"></textarea>
         {% include "/components/captcha.html.j2" %}
         <label for="textOutput">Blog Outline</label>
