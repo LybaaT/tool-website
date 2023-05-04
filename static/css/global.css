@@ -14,16 +14,32 @@
     --primary-focus: #ffde4d;
     --primary-text: #5f5f5f;
     --primary-text-focus: #333333;
-    --secondary: #ffffff;
+    --secondary: #efefef;
     --secondary-text: #847a7a;
     --secondary-text-focus: #2d2c2c;
     --secondary-mark: #423705;
     --border-large: 10px;
     --border-small: 4px;
 }
+html[data-theme='dark'] {
+    --primary: #131319;
+    --primary-focus: #414ab6;
+    --primary-text: #f1f1f1;
+    --primary-text-focus: #e3e3e3;
+    --secondary: #1a1a23;
+    --secondary-text: #bcbcc3;
+    --secondary-text-focus: #dcd7d7;
+    --secondary-mark: #333462;
+}
 body {
-    margin-bottom: 200px;
-    background-color: #F4F4F4;
+    background-color: var(--primary);
+}
+h1, h2, h3, p {
+    color: var(--primary-text);
+}
+textarea, input {
+    background-color: var(--secondary);
+    color: var(--secondary-text);
 }
 .bannerContainer p {
     font-size: 20px;

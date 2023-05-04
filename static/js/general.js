@@ -15,3 +15,8 @@ const lib = {
     alphabet_lowercase: 'abcdefghijklmnopqrstuvwxyz',
     alphabet_uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 }
+
+// Handle theme
+if (location.hash === '#dark') {
+    document.documentElement.setAttribute('data-theme', 'dark')
+}
