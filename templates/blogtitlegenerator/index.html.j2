@@ -29,22 +29,26 @@
             <input id="topicInput" type="text" placeholder="Enter Text Here">
         </div>
         <div class="column" style="margin-left: 28px;">
-        <label for="cars">Choose a car:</label>
+        <label for="cars">How many ideas do you want?</label>
         <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
+            <option value="volvo">3</option>
+            <option value="saab">5</option>
+            <option value="opel">10</option>
+            <option value="audi">15</option>
         </select>
         </div>
     </div>
 
-    <label for="mainPoints">What are the main key points of your blog?</label>
-    <textarea id="mainPoints"></textarea>
-
-    <textarea id="textOutput"></textarea>
+        <label for="mainPoints">What are the main key points of your blog?</label>
+        <textarea id="mainPoints"></textarea>
+        <label>Verify your captcha before proceeding</label>
+        {% include '/components/captcha.html.j2'%}
     </div>
 
+    <div class="borderContainer toolContainer">
+    <h2>Blog Title Ideas</h2>
+    <textarea id="textOutput" readonly></textarea>
+    </div>
     <script src="/static/js/general.js"></script>
     <script>
         {% include "blogtitlegenerator/main.js" %}
