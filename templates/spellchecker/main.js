@@ -1,0 +1,1 @@
+<script src="https://cdn.jsdelivr.net/npm/@grammarly/editor-sdk?clientId=YOUR_CLIENT_ID"></script>
