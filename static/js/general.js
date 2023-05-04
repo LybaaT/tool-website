@@ -28,7 +28,6 @@ if (storedTheme === 'dark') {
 }
 
 toggle.onclick = function() {
-    console.log("hi");
     var currentTheme = document.documentElement.getAttribute("data-theme");
     var targetTheme = "light";
 

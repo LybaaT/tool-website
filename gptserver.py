@@ -1,4 +1,5 @@
 from flask import Flask, request
+from flask_cors import CORS
 
 # Load the AI model
 from nomic.gpt4all import GPT4All
@@ -7,6 +8,7 @@ model.open()
 
 # Create a seperate Flask app
 app = Flask(__name__)
+CORS(app)
 
 # The GPT server is hosted at localhost:4050
 PORT = 4050
@@ -19,7 +21,6 @@ def chatgpt():
     if prompt == None:
         return "No prompt given"
 
-    # Fulfill the request
     return model.prompt(prompt)
 
 # Run the app
