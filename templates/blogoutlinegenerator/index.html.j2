@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>blogoutlinegenerator</title>
+	<title>Blog Outline Generator</title>
 	{% include "/components/meta.html.j2" %}
     <link rel="stylesheet" href="/static/css/generaltool.css">
 	<style>
@@ -12,14 +12,28 @@
 	{% include '/components/header.html.j2' %}
 
     <div class="borderContainer bannerContainer">
-        <h1 class="toolTitle">blogoutlinegenerator</h1>
+        <h1 class="toolTitle">Blog Outline Generator</h1>
         <p class="toolDescription">
-        blogoutlinegenerator is the perfect tool for you.
+        Blog Outline Generator is the perfect tool for you.
         </p>
     </div>
 
     <div class="borderContainer toolContainer">
-        <h1>Content here</h1>
+        <label for="textInput">Title of the blog</label>
+        <input id="textInput" type="text" placeholder="Enter Text Here">
+        <label for="mainPoints">Some main key points of your blog:</label>
+        <textarea id="mainPoints"></textarea>
+        {% include "/components/captcha.html.j2" %}
+        <label for="textOutput">Blog Outline</label>
+        <textarea id="textOutput"></textarea>
+    </div>
+    <div class="borderContainer">
+        <h2>What is a {{pageTitle}}?</h2>
+        <p></p>
+        <h2>Benefits of {{pageTitle}}</h2>
+        <p></p>
+        <h2>How to Use {{pageTitle}}?</h2>
+        <p></p>
     </div>
 
     <script src="/static/js/general.js"></script>
