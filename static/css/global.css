@@ -48,3 +48,6 @@ textarea, input {
 .whiteContainer {
     background-color: var(--primary);
 }
+label {
+    color: var(--primary-text-focus);
+}
