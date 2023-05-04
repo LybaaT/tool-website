@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>blogoutlinegenerator</title>
+	{% include "/components/meta.html.j2" %}
+    <link rel="stylesheet" href="/static/css/generaltool.css">
+	<style>
+        {% include "blogoutlinegenerator/style.css" %}
+	</style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">blogoutlinegenerator</h1>
+        <p class="toolDescription">
+        blogoutlinegenerator is the perfect tool for you.
+        </p>
+    </div>
+
+    <div class="borderContainer toolContainer">
+        <h1>Content here</h1>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "blogoutlinegenerator/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>

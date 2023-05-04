@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>paraphraser</title>
+	{% include "/components/meta.html.j2" %}
+    <link rel="stylesheet" href="/static/css/generaltool.css">
+	<style>
+        {% include "paraphraser/style.css" %}
+	</style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">paraphraser</h1>
+        <p class="toolDescription">
+        paraphraser is the perfect tool for you.
+        </p>
+    </div>
+
+    <div class="borderContainer toolContainer">
+        <h1>Content here</h1>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "paraphraser/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>
