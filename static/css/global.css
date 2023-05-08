@@ -12,6 +12,7 @@
 :root {
     --primary: #ffffff;
     --primary-focus: #ffde4d;
+    --highlight: #fff9dd;
     --primary-text: #5f5f5f;
     --primary-text-focus: #333333;
     --secondary: #efefef;

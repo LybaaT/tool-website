@@ -6,7 +6,22 @@
     <link rel="stylesheet" href="/static/css/generaltool.css">
 	<style>
         {% include "paraphraser/style.css" %}
-	</style>
+    #outputArea {
+        list-style-type: none;
+        padding: 25px 0px;
+        margin: 15px 0px;
+        font-size: 17px;
+        border: 1px solid var(--primary-text);
+    }
+    li {
+        border: 1px solid black;
+        padding: 25px 10px;
+        background-color: var(--primary);
+    }
+    #outputArea li:nth-child(odd) {
+        background-color: var(--highlight);
+    }
+</style>
 </head>
 <body>
 	{% include '/components/header.html.j2' %}
@@ -63,9 +78,10 @@
     </div>
 
     <div class="borderContainer">
+    <h2>References</h2>
         <div id="outputArea"></div>
 
-        <input type="submit" onclick="copyText()" value="Copy Citation">
+        <input type="submit" onclick="copyCitations()" value="Copy Citation">
     </div>
 
     <script src="/static/js/general.js"></script>

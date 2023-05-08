@@ -51,8 +51,13 @@ select.addEventListener('change', () => {
     form.reset();
   });
 //need help here :)
-function copyText() {
-    var outputArea = document.getElementById("outputArea");
-    outputArea.select();
-    navigator.clipboard.writeText(outputArea.value);
-}
+function copyCitations() {
+    const citations = document.querySelectorAll('#outputArea li');
+    let text = '';
+  
+    for (let li of div.getElementsByTagName('li')) {
+        text += li.textContent + '\n';
+    }
+    navigator.clipboard.writeText(text);
+    alert('List text copied to clipboard!');
+    }
