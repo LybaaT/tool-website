@@ -1,5 +1,7 @@
 const form = document.querySelector('#citation-form');
 
+
+
 form.addEventListener('submit', event => {
   event.preventDefault();
   

@@ -56,3 +56,10 @@ textarea, url {
 label {
     color: var(--primary-text-focus);
 }
+.row {
+    width: 100%;
+}
+.column {
+    width: 47%;
+    display: inline-block;
+}
