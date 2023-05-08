@@ -24,6 +24,7 @@ form.addEventListener('submit', event => {
     const publisher = form.publisher.value;
     const style = form.style.value;
     const url = form.url.value;
+    const citationOutput = document.querySelector('outputArea');
 
     let citation;
 
@@ -41,13 +42,14 @@ form.addEventListener('submit', event => {
             citation += '.';
         }
     }
-    
-  
-  textOutput.value = citation;
+
+    outputArea.textContent = citation;
+    form.reset();
 });
 
+//need help here :)
 function copyText() {
-    var outputArea = document.getElementById("textOutput");
+    var outputArea = document.getElementById("outputArea");
     outputArea.select();
-    document.execCommand('copy');
-  }
+    navigator.clipboard.writeText(outputArea.value);
+}
