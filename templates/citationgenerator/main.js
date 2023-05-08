@@ -15,7 +15,9 @@ select.addEventListener('change', () => {
 }
 });
 
-form.addEventListener('submit', event => {
+  const outputArea = document.querySelector('#outputArea');
+
+  form.addEventListener('submit', event => {
     event.preventDefault();
 
     const author = form.author.value;
@@ -24,29 +26,30 @@ form.addEventListener('submit', event => {
     const publisher = form.publisher.value;
     const style = form.style.value;
     const url = form.url.value;
-    const citationOutput = document.querySelector('outputArea');
 
     let citation;
 
     if (style === 'mla') {
-    citation = `${author}. "${title}." ${publisher}, ${date}. ${url}.`;
+      citation = `${author}. "${title}." ${publisher}, ${date}. ${url}.`;
     } else if (style === 'apa7') {
-    citation = `${author} (${date}). ${title}. ${publisher}. ${url}.`;
+      citation = `${author} (${date}). ${title}. ${publisher}. ${url}.`;
     } else if (style === 'chicago') {
-        citation = `${author}. "${title}." ${publisher}, ${date}, ${url}.`;
+      citation = `${author}. "${title}." ${publisher}, ${date}, ${url}.`;
     } else if (style === 'apa6') {
-        citation = `${author} (${date}). ${title}. ${publisher}`;
-        if (url) {
-            citation += `. Retrieved from ${url}.`;
-        } else {
-            citation += '.';
-        }
+      citation = `${author} (${date}). ${title}. ${publisher}`;
+      if (url) {
+        citation += `. Retrieved from ${url}.`;
+      } else {
+        citation += '.';
+      }
     }
 
-    outputArea.textContent = citation;
-    form.reset();
-});
+    const li = document.createElement('li');
+    li.textContent = citation;
+    outputArea.appendChild(li);
 
+    form.reset();
+  });
 //need help here :)
 function copyText() {
     var outputArea = document.getElementById("outputArea");
