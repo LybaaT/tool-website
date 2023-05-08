@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{pageTitle}}</title>
+	{% include "/components/meta.html.j2" %}
+    <link rel="stylesheet" href="/static/css/generaltool.css">
+	<style>
+        {% include "paraphraser/style.css" %}
+	</style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">{{pageTitle}}</h1>
+        <p class="toolDescription">
+        {{pageTitle}} is the perfect tool for you.
+        </p>
+    </div>
+	{% include '/components/darkmode.html.j2' %}
+
+    <div class="borderContainer toolContainer">
+        <form id="citation-form">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+            
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="date">Publication Date:</label>
+            <input type="date" id="date" name="date">
+            
+            <label for="publisher">Publisher:</label>
+            <input type="text" id="publisher" name="publisher">
+
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url">
+            
+            <label for="style">Citation Style:</label>
+            <select id="style" name="style">
+                <option value="mla">MLA</option>
+                <option value="apa">APA</option>
+            </select>
+            
+            <button type="submit">Generate Citation</button>
+        </form>
+        <textarea id="textOutput"></textarea>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "citationgenerator/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>
