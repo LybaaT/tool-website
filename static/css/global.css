@@ -19,6 +19,7 @@
     --secondary-text: #847a7a;
     --secondary-text-focus: #2d2c2c;
     --secondary-mark: #423705;
+    --secondary-mark-focus: #000000;
     --border-large: 10px;
     --border-small: 4px;
 }
@@ -31,6 +32,7 @@ html[data-theme='dark'] {
     --secondary-text: #bcbcc3;
     --secondary-text-focus: #dcd7d7;
     --secondary-mark: #333462;
+    --secondary-mark-focus: #FFFFFF;
 }
 body {
     background-color: var(--primary);

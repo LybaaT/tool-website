@@ -5,22 +5,8 @@
 	{% include "/components/meta.html.j2" %}
     <link rel="stylesheet" href="/static/css/generaltool.css">
 	<style>
-        {% include "paraphraser/style.css" %}
-    #outputArea {
-        list-style-type: none;
-        padding: 25px 0px;
-        margin: 15px 0px;
-        font-size: 17px;
-        border: 1px solid var(--primary-text);
-    }
-    li {
-        border: 1px solid black;
-        padding: 25px 10px;
-        background-color: var(--primary);
-    }
-    #outputArea li:nth-child(odd) {
-        background-color: var(--highlight);
-    }
+        {% include "citationgenerator/style.css" %}
+    </style>
 </style>
 </head>
 <body>
@@ -70,8 +56,10 @@
             <label for="publisher">Publisher:</label>
             <input type="text" id="publisher" name="publisher">
 
-            <label for="url" id="url2">URL:</label>
-            <input type="url" id="url" name="url">
+            <div id="urlContainer">
+                <label for="url" id="url2">URL:</label>
+                <input type="url" id="url" name="url">
+            </div>
             
 			<input type="submit" value="Generate Citation">			
         </form>
@@ -81,7 +69,7 @@
     <h2>References</h2>
         <div id="outputArea"></div>
 
-        <input type="submit" onclick="copyCitations()" value="Copy Citation">
+        <input type="submit" onclick="copyReferences()" value="Copy References">
     </div>
 
     <script src="/static/js/general.js"></script>

@@ -32,7 +32,7 @@
     accent-color: var(--primary-focus);
     cursor: pointer;
 }
-input[type=text], select, textarea {
+input[type=text], input[type=url], input[type=date], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -43,33 +43,10 @@ input[type=text], select, textarea {
     resize: vertical;
     font-size: 17px;
     background-color: var(--secondary);
-}
-input[type=date], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    font-size: 17px;
-    background-color: var(--secondary);
-}
-input[type=url], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    font-size: 17px;
-    background-color: var(--secondary);
+    color: var(--primary-text)
 }
 input[type=submit] {
-    background-color: #000000;
+    background-color: var(--secondary-mark-focus);
     color: var(--primary);
     padding: 12px 20px;
     border: none;
