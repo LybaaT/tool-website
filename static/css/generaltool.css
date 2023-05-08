@@ -42,6 +42,7 @@ input[type=text], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
     font-size: 17px;
+    background-color: var(--secondary);
 }
 input[type=date], select, textarea {
     width: 100%;
@@ -53,6 +54,7 @@ input[type=date], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
     font-size: 17px;
+    background-color: var(--secondary);
 }
 input[type=url], select, textarea {
     width: 100%;
@@ -64,6 +66,7 @@ input[type=url], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
     font-size: 17px;
+    background-color: var(--secondary);
 }
 input[type=submit] {
     background-color: #000000;
