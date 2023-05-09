@@ -7,6 +7,7 @@
 	<style>
         {% include "spellchecker/style.css" %}
 	</style>
+    <script src="https://cdn.jsdelivr.net/npm/@grammarly/editor-sdk?clientId=client_NUiDyKnqaRqdurqKyVQgKR"></script>
 </head>
 <body>
 	{% include '/components/header.html.j2' %}
@@ -35,7 +36,6 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@grammarly/editor-sdk?clientId=client_NUiDyKnqaRqdurqKyVQgKR"></script>
     <script src="/static/js/general.js"></script>
     <script>
         {% include "spellchecker/main.js" %}
