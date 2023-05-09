@@ -51,6 +51,7 @@ form.onsubmit = (event) => {
     outputArea.appendChild(li);
 
     form.reset();
+    
 };
 
 // Copy Citation button
