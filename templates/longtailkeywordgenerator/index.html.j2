@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{pageTitle}}</title>
+	{% include "/components/meta.html.j2" %}
+    <link rel="stylesheet" href="/static/css/generaltool.css">
+	<style>
+        {% include "longtailkeywordgenerator/style.css" %}
+	</style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">{{pageTitle}}</h1>
+        <p class="toolDescription">
+        {{pageTitle}} is the perfect tool for you.
+        </p>
+    </div>
+	{% include '/components/darkmode.html.j2' %}
+
+    <div class="borderContainer toolContainer">
+        <h1>Content here</h1>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "longtailkeywordgenerator/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>
