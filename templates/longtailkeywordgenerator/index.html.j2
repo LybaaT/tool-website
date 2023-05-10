@@ -20,7 +20,25 @@
 	{% include '/components/darkmode.html.j2' %}
 
     <div class="borderContainer toolContainer">
-        <h1>Content here</h1>
+        <div class="column">
+            <label for="source">Main keyword</label>
+            <input type="text" id="keyword">
+                <option value="" disabled selected>Select an option</option>
+                <option value="webpage">Webpage</option>
+                <option value="book">Book</option>
+                <option value="article">Article</option>
+                <option value="other">Other</option>
+            </select></div>
+
+            <div class="column" style="margin-left: 28px;">
+            <label for="style">Citation Style:</label>
+            <select id="style" name="style">
+                <option value="" disabled selected>Select an option</option>
+                <option value="mla">MLA 8</option>
+                <option value="apa7">APA 7</option>
+                <option value="apa6">APA 6</option>
+                <option value="chicago">Chicago</option>
+            </select></div>
     </div>
 
     <script src="/static/js/general.js"></script>
