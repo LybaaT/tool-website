@@ -50,4 +50,6 @@ def tool(toolname):
 def page_not_found(e):
     return render_template('404.html.j2')
 
+import backlinkchecker
+
 app.run(port=PORT, host="0.0.0.0", debug=True)
