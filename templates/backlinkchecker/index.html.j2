@@ -19,8 +19,14 @@
     </div>
 
     <div class="borderContainer toolContainer">
-        <h1>Content here</h1>
-        <input type="text" id="input">
+    <form onsubmit="return getBackLinks(url)">
+        <label for="input">Enter your link</label>
+        <input type="text" id="input" name="input" required>
+        <button type="submit">Search</button>
+
+        <label for="backlinkDiv">Enter your link</label>
+        <input type="text" id="backlinkDiv" name="backlinkDiv">
+    </form>
     </div>
 
     <div class="borderContainer">
