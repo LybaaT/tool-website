@@ -1,1 +1,0 @@
-const form = document.getElementById('keyword-form');
