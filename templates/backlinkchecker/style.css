@@ -1,0 +1,17 @@
+#submitButton {
+    font-size: 20px;
+    color: var(--primary);
+    background-color: var(--secondary-mark-focus);
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#submitButton:hover {
+    background-color: var(--secondary-mark);
+}
+#backlinkDiv {
+    border: 1px solid var(--primary-text);
+    min-height: 20px;
+    border-radius: 4px;
+    padding: 4px;
+}

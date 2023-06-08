@@ -21,15 +21,13 @@
 	{% include '/components/darkmode.html.j2' %}
 
     <div class="borderContainer toolContainer">
-    <form onsubmit="return getBackLinks(url)">
         <label for="input">Enter your link</label>
         <input type="text" id="input" name="input" required>
-        <input type="submit"></form><br><br>
+        <button onclick="getBackLinks()" id="submitButton">Submit Query</button>
+        <br/>
 
-    <form>
         <label for="backlinkDiv">Backlinks</label>
-        <input type="text" id="backlinkDiv" name="backlinkDiv" readonly>
-    </form>
+        <div id="backlinkDiv"></div>
     </div>
 
     <div class="borderContainer">
