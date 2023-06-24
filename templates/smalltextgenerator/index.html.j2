@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{pageTitle}}</title>
+	{% include '/components/meta.html.j2' %}
+	<link rel="stylesheet" href="/static/css/generaltool.css">
+    <style>
+        {% include "smalltextgenerator/style.css" %}
+    </style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">{{pageTitle}}</h1>
+        <p class="toolDescription">
+        Create a perfect password in seconds. Use a different password for every service you use for maximum security.
+        </p>
+    </div>
+	{% include '/components/darkmode.html.j2' %}
+
+    <div class="borderContainer toolContainer">
+        <h1>Superscript Generator</h1>
+        <label for="inputText">Enter Text:</label>
+        <input type="text" id="inputText" placeholder="Enter your text">
+        <button onclick="generateSuperscript()">Generate Superscript</button>
+
+        <label for="outputText">Superscript Text:</label>
+        <textarea id="outputText" rows="4" cols="50" readonly></textarea>
+    </div>
+    <div class="borderContainer">
+        <h2>What is a {{pageTitle}}?</h2>
+        <p></p>
+        <h2>Benefits of {{pageTitle}}?</h2>
+        <p></p>
+        <h2>How to Use {{pageTitle}}?</h2>
+        <p></p>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "/smalltextgenerator/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>
