@@ -61,3 +61,6 @@ label {
     width: 47%;
     display: inline-block;
 }
+ul li {
+    color: var(--primary-text);
+}
