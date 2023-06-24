@@ -1,0 +1,62 @@
+<style>
+footer {
+    background-color: var(--secondary);
+    font-size: 18px;
+    padding-block: 20px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    height: 60px;
+    bottom: 0;
+    padding-bottom: 40px;
+}
+.left {
+    flex-basis: 33%;
+    padding-inline: 30px;
+    color: var(--primary-text);
+}
+.right {
+    flex-basis: 66%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0px;
+    width: 70vw;
+}
+.right a {
+    margin-inline: 1.5vw;
+    color: var(--primary-text);
+    text-decoration: none;
+}
+.right a:hover {
+    color: var(--primary-text-focus);
+}
+@media (max-width: 620px) {
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
+@media (max-width: 400px) {
+    footer {
+        height: 80px;
+    }
+}
+</style>
+<footer>
+    <div class="left">&copy; All rights reserved 2023-<span id="footerYear"></span></div>
+    <div class="right">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/termsofservice">Terms of Service</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/sitemap">Sitemap</a>
+    </div>
+</footer>
+<script>
+    const year = new Date().getFullYear();
+    const elem = document.getElementById('footerYear');
+    elem.innerText = year;
+</script>

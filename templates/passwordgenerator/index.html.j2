@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password Generator</title>
+	{% include '/components/meta.html.j2' %}
+	<link rel="stylesheet" href="/static/css/generaltool.css">
+    <style>
+        {% include "passwordgenerator/style.css" %}
+    </style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">Password Generator</h1>
+        <p class="toolDescription">
+        Create a perfect password in seconds. Use a different password for every service you use for maximum security.
+        </p>
+    </div>
+	{% include '/components/darkmode.html.j2' %}
+
+    <div class="borderContainer toolContainer">
+        <p>Password length: <span id="passwordLengthText">16</span></p>
+        <input type="range" min="1" max="64" value="16" id="passwordLength">
+        <br>
+        <p>Lowercase characters (a-z):</p>
+        <input type="checkbox" checked="true" id="lowercaseCharacters">
+        <br>
+        <p>Uppercase characters (A-Z):</p>
+        <input type="checkbox" checked="true" id="uppercaseCharacters">
+        <br>
+        <p>Numbers (0-9):</p>
+        <input type="checkbox" checked="true" id="numericCharacters">
+        <br>
+        <p>Special Characters:</p>
+        <input type="checkbox" checked="true" id="specialCharacters">
+
+        <hr>
+
+        <p id="entropyLevel" class="feedback"></p>
+        <input type="text" id="passwordOutput">
+    </div>
+    <div class="borderContainer">
+        <h2>What is a {{pageTitle}}?</h2>
+        <p></p>
+        <h2>Benefits of {{pageTitle}}?</h2>
+        <p></p>
+        <h2>How to Use {{pageTitle}}?</h2>
+        <p></p>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "/passwordgenerator/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>

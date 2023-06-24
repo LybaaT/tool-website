@@ -1,0 +1,7 @@
+textarea {
+    height: 200px;
+}
+.feedback span {
+    color: var(--primary-text-focus);
+    font-weight: 800;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{pageTitle}}</title>
+	{% include "/components/meta.html.j2" %}
+    <link rel="stylesheet" href="/static/css/generaltool.css">
+	<style>
+        {% include "citationgenerator/style.css" %}
+    </style>
+</style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+
+    <div class="borderContainer bannerContainer">
+        <h1 class="toolTitle">{{pageTitle}}</h1>
+        <p class="toolDescription">
+        {{pageTitle}} is the perfect tool for you.
+        </p>
+    </div>
+	{% include '/components/darkmode.html.j2' %}
+
+    <div class="borderContainer toolContainer">
+        <form id="citation-form">
+        <div class="column">
+            <label for="source">Source</label>
+            <select id="source" name="source">
+                <option value="" disabled selected>Select an option</option>
+                <option value="webpage">Webpage</option>
+                <option value="book">Book</option>
+                <option value="article">Article</option>
+                <option value="other">Other</option>
+            </select></div>
+
+            <div class="column" style="margin-left: 28px;">
+            <label for="style">Citation Style:</label>
+            <select id="style" name="style">
+                <option value="" disabled selected>Select an option</option>
+                <option value="mla">MLA 8</option>
+                <option value="apa7">APA 7</option>
+                <option value="apa6">APA 6</option>
+                <option value="chicago">Chicago</option>
+            </select></div>
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <div class="column">
+            <label for="date">Publication Date:</label>
+            <input type="date" id="date" name="date"></div>
+
+            <div class="column" style="margin-left: 28px;">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required></div>
+
+            <label for="publisher">Publisher:</label>
+            <input type="text" id="publisher" name="publisher">
+
+            <div id="urlContainer">
+                <label for="url" id="url2">URL:</label>
+                <input type="url" id="url" name="url">
+            </div>            
+			<input type="submit" value="Generate Citation">			
+        </form>
+    </div>
+
+    <div class="borderContainer">
+    <h2>References</h2>
+        <div id="outputArea"></div>
+
+        <input type="submit" onclick="copyReferences()" value="Copy References">
+    </div>
+
+    <div class="borderContainer">
+        <h2>What is a {{pageTitle}}?</h2>
+        <p>more of a test</p>
+        <h2>Benefits of {{pageTitle}}</h2>
+        <p>test test test</p>
+        <h2>How to Use {{pageTitle}}?</h2>
+        <p></p>
+    </div>
+
+    <script src="/static/js/general.js"></script>
+    <script>
+        {% include "citationgenerator/main.js" %}
+    </script>
+  	
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>

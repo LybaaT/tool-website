@@ -1,0 +1,75 @@
+.borderContainer {
+    border-radius: var(--border-large);
+    border: 2px solid var(--secondary-mark);
+    max-width:1000px;
+    margin: 20px min(10%, 120px);
+    padding: 50px;
+    background-color: var(--primary);
+}
+.borderContainer h2 {
+    font-size: 30px;
+}
+.borderContainer p {
+    font-size: 20px;
+}
+.bannerContainer {
+    background-color: var(--primary-focus);
+}
+.toolTitle {
+    font-size: 28px;
+}
+.toolContainer p {
+    font-size: 22px;
+    display: inline-block;
+}
+.toolContainer input[type="range"] {
+    display: block;
+    cursor: ew-resize;
+}
+.toolContainer input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    accent-color: var(--primary-focus);
+    cursor: pointer;
+}
+input[type=text], input[type=url], input[type=date], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-size: 17px;
+    background-color: var(--secondary);
+    color: var(--primary-text)
+}
+input[type=submit] {
+    background-color: var(--secondary-mark-focus);
+    color: var(--primary);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.toolContainer textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-size: 17px;
+}
+.toolContainer .feedback {
+    border: 2px solid var(--primary);
+    padding: 4px;
+    border-radius: var(--border-small);
+    margin-block: 4px;
+    color: var(--secondary-text);
+    font-size: 18px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+	{% include '/components/meta.html.j2' %}
+	<link rel="stylesheet" href="/static/css/generaltool.css">
+	<style>
+		.cardContainer {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			margin-top: 15px;
+		}
+		.card {
+			max-width: 400px;
+			text-align: left;
+			margin: 15px 0px;
+			margin-right: 30px;
+			padding: 15px;
+			border: 1px solid var(--primary-text);
+			border-radius: 5px;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+			transition: background-color 0.1s ease, box-shadow 0.3s ease;
+			cursor: pointer;
+			color: black;
+		}
+		.card:hover {
+			background-color: var(--primary-focus);
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+		}
+		.card img {
+			max-width: 50px;
+			height: auto;
+			border-radius: 5px;
+		}
+		.card h2 {
+			margin-top: 2px;
+			font-size: 20px;
+		}
+		.card p {
+			margin-top: 10px;
+			font-size: 17px;
+			color: var(--secondary-text);
+			line-height: 1.5;
+		}
+		a {
+			color: var(--primary-text);
+			text-decoration: none;
+		}
+		h1 {
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+	{% include '/components/header.html.j2' %}
+	
+    <div class="borderContainer bannerContainer">
+        <h1>Tool Box</h1>
+        <p>For the best free tools online, Tool Box is the ultimate digital tools website. From free SEO tools to creating social media posts, find a complete set of tools at your fingertips!</p>
+    </div>
+
+	{% include '/components/darkmode.html.j2' %}
+	<div class="container">
+		<div class="borderContainer">
+			<h2>Free Text Tools</h2>
+			<p>Your text should be as unique as you. Use our free text tools to liven up your content!</p>
+			<div class="cardContainer">
+				<div class="card">
+				<a href="/tool/fancytextgenerator">
+				<img src="img1.jpg" alt="Card Image">
+				<h2>Fancy Text Generator</h2>
+				<p>Spice up your boring text with new fonts and styles! Check out 10 fancy fonts.</p>
+				</div>
+				<div class="card">
+				<a href="/tool/wordcounter">
+				<img src="img1.jpg" alt="Card Image">
+				<h2>Word Counter</h2>
+				<p>Easily check your word count with multiple settings as you type!</p>
+				</div>
+				<div class="card">
+				<a href="/tool/citationgenerator">
+				<img src="img1.jpg" alt="Card Image">
+				<h2>Citation Generator</h2>
+				<p>Create citations within seconds using the citation generator.</p>
+				</div>
+			</div>
+		</div>
+		<div class="borderContainer">
+			<h2>Free Web Tools</h2>
+			<p>Ensure your website and web safety are ready to go with these free website tools!</p>
+			<div class="cardContainer">
+				<div class="card">
+				<a href="/tool/privacypolicygenerator">
+				<img src="img1.jpg" alt="Card Image">
+				<h2>Privacy Policy Generator</h2>
+				<p>Generate a complete privacy policy for your website with our privacy policy generator.</p>
+				</div>
+				<div class="card">
+				<a href="/tool/termsofservicegenerator">
+				<img src="img1.jpg" alt="Card Image">
+				<h2>Terms Of Service Generator</h2>
+				<p>Get a full-length terms of service for your company, website or business within seconds.</p>
+				</div>
+				<div class="card">
+				<a href="/tool/passwordgenerator">
+				<img src="img1.jpg" alt="Card Image">
+				<p>Generate a strong unbreakable password with our password generator.</p>
+				</div>
+				<div class="card">
+				<a href="/tool/metataggenerator">
+				<h2>Meta Tag Generator</h2>
+				<p>Boost your SEO with accurate and optimized meta tags for your website.</p>
+				</div>
+				<div class="card">
+				<a href="/tool/passwordstrengthchecker">
+				<h2>Password Strength Checker</h2>
+				<p>Check how strong your password is within a second!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+  	
+	<script src="/static/js/general.js"></script>
+  	{% include "/components/footer.html.j2" %}
+</body>
+</html>

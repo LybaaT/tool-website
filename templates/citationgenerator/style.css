@@ -1,0 +1,15 @@
+#outputArea {
+    list-style-type: none;
+    padding: 25px 0px;
+    margin: 15px 0px;
+    font-size: 17px;
+    border: 1px solid var(--primary-text);
+}
+#outputArea li {
+    border: 1px solid black;
+    padding: 25px 10px;
+    background-color: var(--primary);
+}
+#outputArea li:nth-child(odd) {
+    background-color: var(--highlight);
+}
