@@ -46,6 +46,10 @@ def termsofservice():
 def tool(toolname):
     return render_template(toolname + '/index.html.j2', pageTitle = toolnames_readable[toolname])
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.html.j2')
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html.j2')
