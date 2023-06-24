@@ -20,8 +20,10 @@
 	{% include '/components/darkmode.html.j2' %}
 
     <div class="borderContainer toolContainer">
+    <label for="textInput">Enter Text:</label>
         <input id="textInput" type="text" placeholder="Enter Text Here">
-        <textarea id="textOutput"></textarea>
+        <label for="textOutput">Fancy Text:</label>
+        <textarea id="textOutput" readonly></textarea>
     </div>
     <div class="borderContainer">
         <h2>What is a {{pageTitle}}?</h2>
