@@ -14,7 +14,7 @@ toolnames_readable = {
     "smalltextgenerator": "Small Text Generator",
     "summarizer": "Summarizer",
     "citationgenerator": "Citation Generator",
-    "blogoutlinegenerator": "Blog Outline Generator",
+    "passwordstrengthchecker": "Password Strength Checker",
     "blogideagenerator": "Blog Idea Generator",
 }
 
