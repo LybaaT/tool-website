@@ -24,6 +24,11 @@ toolnames_readable = {
 def homepage():
     return render_template('homepage.html.j2')
 
+@app.route('/robots.txt')
+@app.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html.j2')
