@@ -1,8 +1,10 @@
 from flask import Flask, render_template
+from os import getcwd
 
 app = Flask(__name__)
 
 PORT = 3500
+DEBUG = 'root' not in getcwd()
 
 toolnames_readable = {
     "termsofservicegenerator": "Terms of Service Generator",
@@ -48,4 +50,10 @@ def page_not_found(e):
 
 import backlinkchecker
 
-app.run(port=PORT, host="0.0.0.0", debug=True)
+if __name__ == '__main__':
+    if DEBUG:
+        app.run(port=PORT, debug=True)
+    else:
+        from waitress import serve
+        print("Server is live!")
+        serve(app, port=PORT, host="0.0.0.0", threads=2)
