@@ -1,6 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from os import getcwd
-
+from datetime import datetime
 app = Flask(__name__)
 
 PORT = 3500
@@ -47,6 +47,16 @@ def blog():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html.j2')
+
+@app.before_request
+def beforerequest():
+    console_color_blue = '\033[94m'
+    console_color_cyan = '\033[96m'
+    console_color_white = '\033[0m'
+    addr = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
+    time = datetime.now().strftime("[%H:%M:%S]")
+    url = request.url
+    print(console_color_blue + time + ' ' + console_color_cyan + "{:<16}".format(addr) + console_color_white + url)
 
 import backlinkchecker
 
